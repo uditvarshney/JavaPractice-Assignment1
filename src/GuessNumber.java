@@ -1,5 +1,6 @@
 public class GuessNumber {
     public static void main(String[] args){
+
         System.out.print("Enter Target number");
         Reader rd=new Reader();
         int x=rd.nextInt();
@@ -11,7 +12,6 @@ public class GuessNumber {
             }
             else if(guess==x){
                 System.out.println("Right Guess");
-                break;
             }else {
                 System.out.println(guess+" is worng guess. Please type again.");
             }

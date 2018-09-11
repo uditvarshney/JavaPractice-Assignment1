@@ -1,11 +1,10 @@
 public class TomJerry {
-    public static void main(String[] args){
-        Reader rd=new Reader();
-        int n=rd.nextInt();
-        if(n%2!=0 && (20>=n && n<=30)){
-            System.out.println("Tom");
+    public String Test(int n){
+
+        if(n%2==0 && n>=20 && n<=30){
+            return "Jerry";
         }else {
-            System.out.println("Jerry");
+            return "Tom";
         }
     }
 }

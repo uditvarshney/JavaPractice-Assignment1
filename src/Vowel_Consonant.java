@@ -1,7 +1,6 @@
 public class Vowel_Consonant {
-    public static void main(String[] args){
-        Reader rd=new Reader();
-        String str=rd.nextString();
+    public String Test(String str){
+
         boolean flag=true;
         boolean vowel=false;
         boolean consonant=false;
@@ -23,7 +22,8 @@ public class Vowel_Consonant {
         }
         if (flag){
             if(vowel && consonant){
-                System.out.print("Vowel Consonant (should it be ");
+                StringBuilder str1= new StringBuilder();
+                str1.append("Vowel Consonant (should it be ");
                 for (int i=0;i<str.length();i++){
                     if(str.charAt(i)=='a'
                             || str.charAt(i)=='e'
@@ -31,26 +31,28 @@ public class Vowel_Consonant {
                             ||  str.charAt(i)=='o'
                             ||  str.charAt(i)=='u'){
                         if (i!=str.length()-1){
-                            System.out.print(str.charAt(i)+" - vowel, ");
+                            str1.append(str.charAt(i)+" - vowel, ");
                         }else {
-                            System.out.println(str.charAt(i)+" - vowel)");
+                            str1.append(str.charAt(i)+" - vowel)");
                         }
                     }else{
                         if (i!=str.length()-1){
-                            System.out.print(str.charAt(i)+" - consonant, ");
+                            str1.append(str.charAt(i)+" - consonant, ");
                         }else {
-                            System.out.println(str.charAt(i)+" - consonant)");
+                            str1.append(str.charAt(i)+" - consonant)");
                         }
                     }
+
                 }
+                return str1.toString();
             }else if (vowel){
-                System.out.println("Vowel");
+                return "Vowel";
             }else{
-                System.out.println("Consonant");
+                return "Consonant";
             }
 
         }else {
-            System.out.println("Error: String contains digit.");
+            return "Error: String contains digit.";
         }
 
     }

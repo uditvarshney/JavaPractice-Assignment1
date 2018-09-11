@@ -1,17 +1,17 @@
 public class Check_character {
-    public static void main(String[] args){
-        Reader rd=new Reader();
-        Character ch=rd.next().charAt(0);
+    public String Test(String str){
+
+        Character ch= str.charAt(0);
         if(Character.isLetter(ch)){
             if (Character.isUpperCase(ch)){
-                System.out.println("Capital Letter");
+                return "Capital Letter";
             }else {
-                System.out.println("Small Case Letter");
+                return "Small Case Letter";
             }
         }else if (Character.isDigit(ch)){
-            System.out.println("Digit");
+            return "Digit";
         }else {
-            System.out.println("Special Symbol");
+            return "Special Symbol";
         }
     }
 }
